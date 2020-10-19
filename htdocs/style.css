@@ -1,0 +1,236 @@
+/*index*/
+#wrapper-start-page{
+}
+#lets-start{
+  background:dimgrey;
+  color: white;
+  font-size: 40px;
+  font-family: Salina, serif;
+  transition: transform .2s;
+  text-decoration: none;
+  padding: 20px 50px 20px 50px;
+
+}
+#lets-start:hover{
+   transform: scale(5);
+ }
+#start-screen{
+  text-align: center;
+
+  text-decoration: none;
+}
+
+#welcome{
+  height: 300px;
+  font-family: Salina, serif;
+  font-size: 50px;
+  padding-top: 110px;
+  border-radius: 20%;
+  background-color: white;
+
+}
+
+#login-index{
+
+}
+.circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border-color: coral transparent transparent;
+  animation:
+    pulse 3s ease infinite alternate,
+    nudge 5s linear infinite alternate;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+}
+@keyframes pulse {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(1000px, 800px);
+  }
+
+  80% {
+    transform: translate(100px, );
+  }
+}
+#wrapper-circle{
+  padding-left: 300px;
+}
+
+/* home page */
+
+
+body{
+    background-color: RGB(144,196,239);
+  font-family: "Arial Black", serif;
+}
+* {
+  box-sizing: border-box;
+}
+#wrapper{
+    background-color: RGB(144,196,239);
+}
+
+
+
+/* Header*/
+#nav-bar{
+  background: rgb(255 255 255);
+  width: 100%;
+}
+.dropbtn {
+  background-color:white;
+  color: black;
+  padding: 40px 90px 40px 90px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 30px 26px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #cfe2f3;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+.dropdown:hover .dropbtn {background-color: lightgrey;}
+#header{
+
+}
+#banner{
+  margin-top: -60px;
+  padding-bottom: 42px;
+  margin-left: 40%;
+}
+/*intro section */
+#intro{
+  display: block;
+  margin-left: 50px;
+
+  position: absolute;
+
+}
+.profile-info{
+  size: auto;
+  width: 500px;
+  text-align: start;
+}
+.profile-photo{
+  background: rgba(15,28,63,0.125);
+  border-radius: 50%;
+  height: 350px;
+  object-fit: cover;
+  width: 350px;
+}
+
+/* laptop */
+@media only screen and (min-width: 1000px ) {
+  /* logo section */
+  #logo{
+    padding-top: 20px;
+    position: center;
+    height: 100px;
+    padding-left: 30px;
+    transform: rotateZ(40deg);
+    transition: transform .2s;
+
+  }
+  #wrapper{
+    background-color: RGB(144,196,239);
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+    max-width: 1445px; /* 2 */
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+    text-align: center;
+
+  }
+
+}
+/*tablet*/
+@media only screen and (min-width: 481px)and (max-width: 1000px){
+  /*index*/
+  /* logo section */
+  #logo{
+    padding-top: 20px;
+    margin: auto;
+    height: 300px;
+    padding-left: 30px;
+    transform: rotateZ(40deg);
+
+
+  }
+  #wrapper-start-page{
+    text-align: center;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+  body{
+    background: RGB(144,196,239);
+  }
+  .profile-photo{
+    width: 200px;
+    height: 200px;
+  }
+  /*index*/
+   /* logo section */
+  .website-logo{
+    height: 80px;
+    margin-left: 90%;
+    margin-top: -500px;
+
+  }
+  #logo{
+    padding-top: 20px;
+    text-align: center;
+    height: 300px;
+    padding-left: 30px;
+    transform: rotateZ(40deg);
+
+  }
+  #wrapper-start-page{
+    text-align: center;
+  }
+  #banner{
+    margin-left: 40%;
+  }
+
+}
+
