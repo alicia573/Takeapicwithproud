@@ -3,6 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
         <link rel = "icon" type = "image/png" href = "img/LogoMakr_9pgnAN.png">
         <title>Take a pic with proud-Alicia Fernandes</title>
         <meta http-equiv="content-language" content="en">
@@ -14,29 +16,39 @@
     <header id="header">
         <table>
             <div id="nav-bar">
-                <div class="dropdown">
-                    <button class="dropbtn">Menu</button>
-                    <div class="dropdown-content">
-                        <a href="home.html">Home</a>
-                        <a href="Posts.html">Posts</a>
-                        <a href="Contact.html">Contact</a>
-                        <a href="login.html">Login</a>
-                    </div>
-                </div>
+                <a id="posts" href="Posts.html">Posts</a>
                 <div id="banner"> Take A pic with proud</div>
-                <img src="img/LogoMakr_9pgnAN.png" alt="" class="website-logo"/>
+                <picture>
+                    <img src="img/apple.jpg" id="poster-1" alt="">
+                    <img src="" id="poster-2" alt="">
+                </picture>
             </div>
         </table>
      </header>
         <div id="wrapper">
-
-          <article id="intro">
-           <h1 class="profile-info">
-             "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</h1>
+          <section id="intro">
+              <h1>Over mijzelf</h1>
+           <h4 class="profile-info">
+             "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</h4>
             <img class="profile-photo" src="img/P1010281.JPG" alt="profile-photo">
-          </article>
-          <comment id="comments-section">
-          </comment>
+          </section>
+            <section>
+
+            </section>
+          <footer>
+              <form id="contact-form">
+                  <label>Naam
+                  <input name="naam" id="name-form">
+                  </label>
+                  <label>Email
+                      <input name="email" id="email-form">
+                  </label>
+                  <label>Bericht
+                      <textarea name="bericht" id="bericht-form"></textarea>
+                  </label>
+                  <button>Stuur</button>
+              </form>
+          </footer>
         </div>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168946651-1"></script>

@@ -1,4 +1,7 @@
 /*index*/
+#body-index{
+  background-color: #CEFDFF;
+}
 #wrapper-start-page{
 }
 #lets-start{
@@ -73,81 +76,56 @@
   padding-left: 300px;
 }
 
-/* home page */
+/*------------------------------------------- home page */
 
 
 body{
-    background-color: RGB(144,196,239);
-  font-family: "Arial Black", serif;
+    background-color:transparent ;
+    margin: 0;
+    padding: 0;
 }
-* {
-  box-sizing: border-box;
-}
+
 #wrapper{
-    background-color: RGB(144,196,239);
+    background-color: #CCFFCB;
+    margin: auto;
+   width:80%;
+
 }
 
 
 
 /* Header*/
-#nav-bar{
-  background: rgb(255 255 255);
-  width: 100%;
-}
-.dropbtn {
-  background-color:white;
-  color: black;
-  padding: 40px 90px 40px 90px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  text-align: left;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 30px 26px;
+#nav-bar,a{
+  background-color: black;
   text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {background-color: #cfe2f3;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-
+  color: white;
 }
 
-.dropdown:hover .dropbtn {background-color: lightgrey;}
-#header{
-
-}
 #banner{
-  margin-top: -60px;
-  padding-bottom: 42px;
-  margin-left: 40%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  background-color: grey;
 }
+picture{
+  display: table;
+}
+#poster-1, #poster-2{
+  width: 50%;
+  height: 50%;
+}
+
 /*intro section */
 #intro{
   display: block;
-  margin-left: 50px;
+  margin-left:10%;
+  font-family: 'Lobster Two', cursive;
 
-  position: absolute;
 
 }
 .profile-info{
-  size: auto;
-  width: 500px;
+
+  width: 80%;
   text-align: start;
 }
 .profile-photo{
@@ -157,7 +135,24 @@ body{
   object-fit: cover;
   width: 350px;
 }
+/*---------------footer*/
+footer{
+  width: 50%;
 
+
+}
+#contact-form{
+width: 100px;
+  margin: auto;
+}
+#name-form,#email-form{
+  width: 350px;
+  height: 50%;
+}
+#bericht-form{
+  height: 200px;
+  width: 200px;
+}
 /* laptop */
 @media only screen and (min-width: 1000px ) {
   /* logo section */
@@ -170,16 +165,7 @@ body{
     transition: transform .2s;
 
   }
-  #wrapper{
-    background-color: RGB(144,196,239);
-    margin-right: auto; /* 1 */
-    margin-left:  auto; /* 1 */
-    max-width: 1445px; /* 2 */
-    padding-right: 10px; /* 3 */
-    padding-left:  10px; /* 3 */
-    text-align: center;
 
-  }
 
 }
 /*tablet*/
@@ -225,12 +211,12 @@ body{
     transform: rotateZ(40deg);
 
   }
-  #wrapper-start-page{
-    text-align: center;
-  }
-  #banner{
-    margin-left: 40%;
-  }
+
+#wrapper-start-page{
+  text-align: center;
+}
+#banner{
 
 }
 
+}
