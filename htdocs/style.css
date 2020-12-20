@@ -1,17 +1,19 @@
-/*index*/
-#body-index{
+/*Start page*/
 
-}
-#wrapper-start-page{
+#logo{
+  transform: rotateZ(40deg);
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
 }
 #lets-start{
-  background:dimgrey;
-  color: white;
+background-color: transparent;
+  color: #cbffba;
   font-size: 40px;
   font-family: Salina, serif;
-  transition: transform .2s;
+
   text-decoration: none;
-  padding: 20px 50px 20px 50px;
+
 
 }
 #lets-start:hover{
@@ -19,7 +21,6 @@
  }
 #start-screen{
   text-align: center;
-
   text-decoration: none;
 }
 
@@ -35,40 +36,7 @@
 
 
 /*particles*/
-#body-index{
-  margin:0;
-  font:normal 75% Arial, Helvetica, sans-serif;
-}
-canvas{
-  display: block;
-  vertical-align: bottom;
-}
-/* ---- particles.js container ---- */
-#particles-js{
-  position:absolute;
-  width: 100%; height: 100%;
-  background-color: #2c2e43;
-  background-image: url("style.css");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-/* ---- stats.js ---- */
-.count-particles {
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
 
-}
 
 
 
@@ -78,7 +46,6 @@ html{
 }
 
 body{
-    background-color:transparent ;
     margin: 0;
     padding: 0;
 }
@@ -138,8 +105,12 @@ section{
 footer{
   width: 100%;
   background-color: black;
-  color: white;
+  color: white;height: 20%;
+}
+#footer-section{
+  font-family: normal, serif;
   text-align: center;
+
 }
 #contact-form{
   width: 100px;
@@ -154,66 +125,3 @@ footer{
   width: 400px;
 }
 /* laptop */
-@media only screen and (min-width: 1000px ) {
-  /* logo section */
-  #logo{
-    padding-top: 20px;
-    position: center;
-    height: 100px;
-    padding-left: 30px;
-    transform: rotateZ(40deg);
-    transition: transform .2s;
-
-  }
-
-
-}
-/*tablet*/
-@media only screen and (min-width: 481px)and (max-width: 1000px){
-  /*index*/
-  /* logo section */
-  #logo{
-    padding-top: 20px;
-    margin: auto;
-    height: 300px;
-    padding-left: 30px;
-    transform: rotateZ(40deg);
-
-
-  }
-  #wrapper-start-page{
-    text-align: center;
-  }
-}
-
-/* mobile */
-@media only screen and (max-width: 480px) {
-  .profile-photo{
-    width: 200px;
-    height: 200px;
-  }
-  /*index*/
-   /* logo section */
-  .website-logo{
-    height: 80px;
-    margin-left: 90%;
-    margin-top: -500px;
-
-  }
-  #logo{
-    padding-top: 20px;
-    text-align: center;
-    height: 300px;
-    padding-left: 30px;
-    transform: rotateZ(40deg);
-
-  }
-
-#wrapper-start-page{
-  text-align: center;
-}
-#banner{
-
-}
-
-}
