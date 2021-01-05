@@ -167,6 +167,30 @@ section{
   margin-left:10%;
   font-family: 'Lobster Two', cursive;
 }
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    content: '★ ';
+
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+
 /*---------------footer*/
 footer{
     width: 100%;
@@ -188,18 +212,33 @@ footer{
 #contact-form{
     font-family: "18thCentury",serif;
     font-size: 30px;
-    width: 200px;
-    float: left;
-    display: grid;
-    background: #cbffba;
+    width: 100%;
+    background: transparent;
+}
+#form{
+padding-bottom: 50px;
+}
+input,textarea{
+    border: 0
+}
+input:hover{
+background-color: lightblue;
+    transform: scale(1.2);
 
 }
-
-#name-form,#email-form{
-  width: 50%;
-  height: 50%;
+input:fullscreen{
+    border-bottom-color: violet;
+}
+#button{
+    width: 20%;
+    height: 50px;
+    background-color: lightblue;
+    border:0
+}
+#name-form,#email-form,#subject{
+  width: 80%;
 }
 #bericht-form{
   height: 200px;
-  width: 70%;
+  width: 80%;
 }

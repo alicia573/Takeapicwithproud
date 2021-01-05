@@ -7,7 +7,8 @@
   <title>Take a pic with proud-Alicia Fernandes</title>
   <meta http-equiv="content-language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="main.js"></script>
+  <script src=""></script>
 </head>
   <body>
     <div id="wrapper">
@@ -19,18 +20,35 @@
         </div>
         <img src="img/Contact-image.jpg" alt="Contact" id="contactImage">
       </header>
-      <form id="contact">
-        <label>Name
-          <input name="name" type="text" id="name-form">
-        </label>
-        <label>Email
-          <input name="email" type="email" id="email-form">
-        </label>
-        <label>Bericht
-          <textarea name="textbox" id="bericht-form"></textarea>
-        </label>
-      </form>
+      <section id="form">
+        <h2>Contact</h2>
+        <form method="post" id="contact-form" action="contact.php" name="myemailform">
+          <label>Naam<br>
+            <input name="name" type="text" id="name-form" placeholder="Naam">
+          </label><br>
+          <label>Email<br>
+            <input name="email" type="email" id="email-form" placeholder="Email">
+          </label><br>
+          <label>Onderwerp<br>
+            <input name="subject" placeholder="Onderwerp">
+          </label><br>
+          <label>Bericht<br>
+            <br><textarea name="message" id="bericht-form" placeholder="Bericht"></textarea>
+          </label><br>
+          <button type="button" value="Submit" name="submit" id="button">Submit</button>
+        </form>
+        <h4 class="sent-notification"></h4>
+      </section>
     </div>
+    <footer>
 
-  </body>
+      <section id="footer-section">
+        <br>
+        Copyright &copy;  2020 Alicia Fernandes
+
+      </section>
+
+    </footer>
+
+    </body>
 </html>
