@@ -20,7 +20,11 @@
             mail($to,$messageSubject,$body);
             $message_sent = false;
 
-     }if($_POST['email'] && $_POST['name'] && $_POST['subject'] && $_POST['message'] == ''){
+     }else{
+            $invalid_class_name= "form-invalid";
+        }
+
+        if($_POST['email'] && $_POST['name'] && $_POST['subject'] && $_POST['message'] == ''){
             echo"one more answer";
 
         }
@@ -44,10 +48,9 @@
             if(!$message_sent):
         ?>
 
-            <h3> Thanks, we'll be in touch</h3>
-            <a href="Index.html">Home</a>
+                <meta http-equiv="refresh" content="0;'Index.html#header' "/>
 
-        <?php
+            <?php
             else:
 
         ?>
@@ -67,7 +70,7 @@
                         <input name="name" type="text" id="name-form" placeholder="Naam">
                     </label><br>
                     <label>Email<br>
-                        <input name="email" type="email" id="email-form" placeholder="Email">
+                        <input<?=$invalid_class_name ?? ""?> name="email" type="email" id="email-form" placeholder="Email">
                     </label><br>
                     <label>Onderwerp<br>
                         <input name="subject" placeholder="Onderwerp" id="subject">

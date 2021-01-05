@@ -167,6 +167,10 @@ section{
   margin-left:10%;
   font-family: 'Lobster Two', cursive;
 }
+#Leren-list{
+    display: list-item;
+    width: 30px;
+}
 
 .rate {
     float: left;
