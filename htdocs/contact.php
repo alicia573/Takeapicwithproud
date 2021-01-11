@@ -18,7 +18,7 @@
             $body.= "From: ".$message."\r\n";
 
             mail($to,$messageSubject,$body);
-            $message_sent = false;
+            $message_sent = true;
 
      }else{
             $invalid_class_name= "form-invalid";
@@ -47,22 +47,18 @@
         <?php
             if(!$message_sent):
         ?>
-
-                <meta http-equiv="refresh" content="0;'Index.html#header' "/>
-
-            <?php
+            <h3>done!</h3>
+        <?php
             else:
 
         ?>
-        <div id="wrapper">
-            <header id="header">
-                <div id="nav-bar">
-                    <div>
-                        <a href="Index.html#header" id="banner">Take A pic with proud</a>
+    <header id="headerContact">
+                    <div id="nav-bar">
+                         <a href="index2.html#header" id="banner">Take A pic with proud</a>
                     </div>
-                </div>
-                <img src="img/Contact-image.jpg" alt="Contact" id="contactImage">
-            </header>
+                    <img src="img/Contact-image.jpg" alt="Contact" id="contactImage">
+                </header>
+        <div id="wrapper">
             <section id="form">
                 <h2>Contact</h2>
                 <form method="post" id="contact-form" action="contact.php" name="myemailform">
@@ -87,7 +83,7 @@
         <section id="footer-section">
             <br>
             Copyright &copy;  2020 Alicia Fernandes
-
+<           <a href="test.php">test</a>
         </section>
     </footer>
     <?php

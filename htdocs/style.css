@@ -1,15 +1,4 @@
-/*Start page*/
-.element::-webkit-scrollbar { width: 0 !important }
-#logo{
-  height: 200px;
-  margin: 0px auto;
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-#blank{
-  background-color: transparent;
-}
+/* ------------arrow-----------*/
 .arrow{
   display: inline-block;
   width: 15px;
@@ -28,7 +17,18 @@ margin-bottom: 50px;
   transform: scale(2) rotate(135deg);
 
 }
-
+/*------------Start screen -------------*/
+.element::-webkit-scrollbar { width: 0 !important }
+#logo{
+    height: 200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+#blank{
+    background-color: transparent;
+}
 #lets-start{
 background-color: transparent;
   color: #cbffba;
@@ -55,51 +55,12 @@ background-color: transparent;
   background-color: white;
 
 }
-
-
-/*Glowing*/
-#geeks {
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
 }
 
-#geeks::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: green;
-    animation: animate 4s forwards infinite;
-    animation-direction: alternate;
 
-
-}
-
-@keyframes animate {
-    0% {
-        left: 0px; top: 0px;
-    }
-    25%{
-        left: 200px; top: 0px;
-    }
-    50%{
-        left: 200px; top: 200px;
-    }
-    75%{
-        left: 0px; top: 200px;
-
-    }
-    100% {
-        left: 0px; top: 0px;
-    }
-}
 
 /*------------------------------------------- home page */
 
@@ -115,18 +76,26 @@ body{
 #wrapper{
     background-color: #CCFFCB;
     margin: auto;
-   width:80%;
-
+    width:80%;
+    padding-top:100px;
+    margin-top:-80px;
+    padding-bottom: 50px;
 }
 
 
 
-/* Header*/
+/*-----------------Header--------------------------------*/
 #header{
-    width: 100%;
-
     text-align: center;
+    width: 80%;
+    margin: auto;
 }
+#headerContact{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
 #nav-bar,a{
     text-decoration: none;
     color: white;
@@ -139,7 +108,9 @@ body{
 #banner{
   font-size: 40px;
   color: white;
-
+}
+#Home-banner{
+    width: 100%;
 }
 picture{
   display: table;
@@ -149,7 +120,7 @@ picture{
   height: 50%;
 }
 
-/*intro section */
+/*-----------------------intro section */
 
 .profile-photo{
   background: rgba(15,28,63,0.125);
@@ -159,7 +130,7 @@ picture{
   width: 50%;
   text-align: center;
 }
-/*----sections*/
+/*--sections-*/
 section{
   width: 80%;
   text-align: start;
@@ -167,32 +138,27 @@ section{
   margin-left:10%;
   font-family: 'Lobster Two', cursive;
 }
-#Leren-list{
-    display: list-item;
-    width: 30px;
+img.Memorygame-image{
+    height: 50%;
+    width: 50%;
 }
 
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-    content: '★ ';
-
+.content{
+    height: 200px;
+    width: 325px;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
 }
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+.content .images{
+    height: 100%;
+    width: 100%;
 }
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    font-size:30px;
-    color:#ccc;
+.images img{
+    height: 100%;
+    width: 100%;
 }
-.rate:not(:checked) > label:before {
-    content: '★ ';
+.list{
+    margin-left: -30px
 }
 
 /*---------------footer*/
