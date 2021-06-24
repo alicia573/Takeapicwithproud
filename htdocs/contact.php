@@ -1,37 +1,12 @@
 <?php
-    $message_sent="false";
-    if(isset($_POST['email']) && $_POST['email'] !=""){
-        //submit the form
 
-        if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-
-            $userName = $_POST['name'];
-            $userEmail = $_POST['email'];
-            $messageSubject = $_POST['subject'];
-            $message = $_POST['message'];
-
-            $to= "aliciafernandes573@gmail.com";
-            $body='';
-
-            $body.= "From: ".$userName."\r\n";
-            $body.= "From: ".$userEmail."\r\n";
-            $body.= "From: ".$message."\r\n";
-
-            mail($to,$messageSubject,$body);
-            $message_sent = true;
-
-     }else{
-            $invalid_class_name= "form-invalid";
-        }
-
-        if($_POST['email'] && $_POST['name'] && $_POST['subject'] && $_POST['message'] == ''){
-            echo"one more answer";
-
-        }
-
-
-
+    if(isset($_POST['submit'])) {
+        require_once "config.php";
+        $db = new config("localhost", "id15916792_takeapicwithproud", "3306", "id15916792_takeapic", "Takeapic-123");
+        $db->insertMessages($_POST['name'],$_POST['email'], $_POST['tel'],$_POST['subject'], $_POST['message']);
+        header('Location: emailHasBeenSent.html?send=true');
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,51 +19,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <?php
-            if(!$message_sent):
-        ?>
-            <h3>done!</h3>
-        <?php
-            else:
-
-        ?>
-    <header id="headerContact">
-                    <div id="nav-bar">
-                         <a href="index2.html#header" id="banner">Take A pic with proud</a>
-                    </div>
-                    <img src="img/Contact-image.jpg" alt="Contact" id="contactImage">
-                </header>
+     <div id="menu">
+         <!--<div class="icon-contact">
+             <a href="contact.php" class="text-button">Contact</a>
+         </div>-->
+         <div class="icon-cv">
+             <a class="text-button" href="CV.pdf">CV</a>
+         </div>&nbsp;&nbsp;
+         <div class="icon-git">
+             <a href="https://github.com/alicia573" class="text-button">Github</a>
+         </div>
+     </div>
+    <header id="header">
+        <div id="nav-bar">
+            <a href="index.html#header" id="banner">Take A pic with proud</a>
+        </div>
+        <img src="img/Contact-image.jpg" alt="Contact" id="contactImage">
+    </header>
         <div id="wrapper">
             <section id="form">
                 <h2>Contact</h2>
-                <form method="post" id="contact-form" action="contact.php" name="myemailform">
+                <form method="POST" id="contact-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="myemailform">
                     <label>Naam<br>
-                        <input name="name" type="text" id="name-form" placeholder="Naam">
+                        <input name="name" type="text" id="name-form" placeholder="Naam"required>
                     </label><br>
                     <label>Email<br>
-                        <input<?=$invalid_class_name ?? ""?> name="email" type="email" id="email-form" placeholder="Email">
+                        <input name="email" type="email" id="email-form" placeholder="Email" required>
+                    </label><br>
+                    <label>Telefoonnummer<br>
+                        <input name="tel" type="tel" id="tel-form" placeholder="Telefoonnummer" required>
                     </label><br>
                     <label>Onderwerp<br>
-                        <input name="subject" placeholder="Onderwerp" id="subject">
+                        <input name="subject" placeholder="Onderwerp" id="subject"required>
                     </label><br>
                     <label>Bericht<br>
-                        <br><textarea name="message" id="bericht-form" placeholder="Bericht"></textarea>
+                        <br><textarea name="message" id="bericht-form" placeholder="Bericht" required></textarea>
                     </label><br>
                     <button type="submit" value="submit" name="submit" id="button">Submit</button>
                 </form>
-                <h4 class="sent-notification"></h4>
+
             </section>
         </div>
     <footer>
         <section id="footer-section">
             <br>
             Copyright &copy;  2020 Alicia Fernandes
-<           <a href="test.php">test</a>
         </section>
     </footer>
-    <?php
-    endif;
-    ?>
     </body>
 </html>
 

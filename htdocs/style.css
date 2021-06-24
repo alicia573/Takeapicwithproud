@@ -38,11 +38,10 @@ background-color: transparent;
 
 }
 
-#start-screen{
+.start-screen{
   text-align: center;
   text-decoration: none;
   padding-bottom: 100%;
-  overflow: hidden;
   justify-content: center;
 
 }
@@ -55,12 +54,28 @@ background-color: transparent;
   background-color: white;
 
 }
-canvas {
-    border: 1px solid #d3d3d3;
-    background-color: #f1f1f1;
+
+/*-----running man ---*/
+
+#cheer{
+display: flex;
 }
+.monster{
+    margin: 10px auto 20px;
+    display: block;
+    position: relative;
+    height: 384px;
+    width: calc(4608px/12);
+    overflow: hidden;
+    background:url(img/monster2.png) ;
+    animation: animateMonster 1s steps(12) infinite;
+}
+@keyframes animateMonster {
+    100%{
+        background-position: -4608px,0;
+    }
 
-
+}
 
 /*------------------------------------------- home page */
 
@@ -72,7 +87,12 @@ body{
     margin: 0;
     padding: 0;
 }
+.background-colors{
+    position: absolute;
+    border-radius: 100%;
 
+
+}
 #wrapper{
     background-color: #CCFFCB;
     margin: auto;
@@ -80,10 +100,35 @@ body{
     padding-top:100px;
     margin-top:-80px;
     padding-bottom: 50px;
+
 }
+#wrapper-email{
+    margin: auto;
+    width:80%;
+    padding-top:15%;
+    padding-bottom: 10px;
+    position: relative;
+}
+.icon-contact, .icon-git, .icon-cv {
+    position: relative;
+    font-family: initial;
+    font-size: 2vw;
+    display:flex ;
+    margin-top: 50px;
+    transform: rotate(270deg);
+}
+.text-button{
+     text-decoration: none;
+     background: #67a662;
+     padding: 10px;
+     border-radius: 12px;
+ }
+#menu{
+    display: inline-block;
+    position: fixed;
 
 
-
+}
 /*-----------------Header--------------------------------*/
 #header{
     text-align: center;
@@ -100,14 +145,15 @@ body{
     text-decoration: none;
     color: white;
     background-color: grey;
+    height: 100%;
 }
 #contactImage{
     width: 100%;
     padding-bottom: 50px;
 }
 #banner{
-  font-size: 40px;
-  color: white;
+    font-size: 50px;
+    color: white;
 }
 #Home-banner{
     width: 100%;
@@ -121,26 +167,53 @@ picture{
 }
 
 /*-----------------------intro section */
-
+#intro{
+    margin-bottom: 100px;
+}
 .profile-photo{
   background: rgba(15,28,63,0.125);
   border-radius: 50%;
-  height: 50%;
+  height: 30%;
   object-fit: cover;
-  width: 50%;
+  width: 30%;
   text-align: center;
+    margin:0 20px 20px 0;
+    float: right;
+}
+#profile-info{
+    width: 70%;
 }
 /*--sections-*/
 section{
-  width: 80%;
-  text-align: start;
-  display: block;
-  margin-left:10%;
-  font-family: 'Lobster Two', cursive;
+    width: 80%;
+    text-align: start;
+    display: block;
+    margin-left:10%;
+    font-family: 'Lobster Two', cursive;
+}
+#interest{
+    width: 50%;
+}
+#sent{
+    background-color: #CCFFCB;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: table;
+    padding: 10px;
+}
+#mail-gif{
+    width: 20%;
+    height: 20%;
+}
+#Link-home{
+    background-color: #CCFFCB ;
+    color: dodgerblue;
 }
 img.Memorygame-image{
     height: 50%;
     width: 50%;
+    color: blue;
 }
 
 .content{
@@ -160,6 +233,7 @@ img.Memorygame-image{
 .list{
     margin-left: -30px
 }
+/* slidewshow*/
 
 /*---------------footer*/
 footer{
@@ -172,11 +246,13 @@ footer{
   text-align: center;
 
 }
-#contacttext{
-     color: blue;
-     background: transparent;
 
- }
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+    display:none;
+    background-color: transparent;
+}
+
 /*--------------------------Contact Form */
 
 #contact-form{
@@ -205,7 +281,7 @@ input:fullscreen{
     background-color: lightblue;
     border:0
 }
-#name-form,#email-form,#subject{
+#name-form,#email-form,#subject, #tel-form{
   width: 80%;
 }
 #bericht-form{

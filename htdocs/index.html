@@ -10,18 +10,31 @@
         <title>Take a pic with proud-Alicia Fernandes</title>
         <meta http-equiv="content-language" content="en">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta >
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
+
     <body>
-        <div id="start-screen">
+        <div id="menu">
+            <!--<div class="icon-contact">
+            <a href="contact.php" class="text-button">Contact</a>
+        </div>-->
+            <div class="icon-cv">
+                <a class="text-button" href="CV.pdf">CV</a>
+            </div>&nbsp;&nbsp;
+            <div class="icon-git">
+                <a href="https://github.com/alicia573" class="text-button">Github</a>
+            </div>
+        </div>
+        <div class="start-screen" >
             <div id="geeks"></div>
             <img src="img/LogoMakr_9pgnAN.png" id="logo" alt="Logo">
             <script type=""></script>
             <p id="welcome">Welcome,<br>To My Page</p>
             <p id="lets-start">Lets Start</p>
             <a id="blank" href="#header"><span class="arrow arrow-bottom"></span></a>
-            <div onload="Game()"></div>
+            <div id="cheer">
+                <div class="monster"></div>
+            </div>
         </div>
         <header id="header">
             <div id="nav-bar">
@@ -38,13 +51,13 @@
             </section>
           <section id="intro">
               <h1>Over mijzelf</h1>
-           <h4 class="profile-info">
-               <p id="Hallo">Hallo,</p>Mijn naam is Alicia Fernandes en dit is mijn portfolio.
-               Ik ben 17 jaar oud en wil graag later bezig zijn in de sector ICT(Front-end developer).
-               Ik ben nog een beginner met programmeren. Ik probeer veel te leren en ben heel erg productief bezig.
-               Er zijn vaak wel
-           </h4>
-            <img class="profile-photo" src="img/P1010281.JPG" alt="profile-photo">
+               <h4 id="profile-info">
+                   <img class="profile-photo" src="img/P1010281.JPG" alt="profile-photo">
+                   <p id="Hallo">Hallo,</p>Mijn naam is Alicia Fernandes en dit is mijn portfolio.
+                   Ik ben 17 jaar oud en wil graag later bezig zijn in de sector ICT(Front-end developer).
+                   Ben heel erg enthousiast voor muziek, fotografie en traveling.
+                   Ik ben nog een beginner met programmeren. Elke keer als ik bezig ben met programmeren leer ik iets nieuws.
+               </h4>
           </section>
             <section id="interest">
                 <h1>My interests</h1>
@@ -67,10 +80,10 @@
                 <h1>Skills</h1>
                 <ul class="list">
                     <li><h3>Java&#9733;&#9734;&#9734;&#9734;&#9734;</h3></li>
-                    <li><h3>SQL &#9733; &#9733;	&#9734;&#9734;&#9734;</h3></li>
-                    <li><h3>HTML/CSS &#9733;&#9733;&#9734;&#9734;&#9734;</h3></li>
-                    <li><h3>Javascript &#9733;&#9734;&#9734;&#9734;&#9734;</h3></li>
-                    <li><h3>PHP &#9733;	&#9734;&#9734;&#9734;&#9734;</h3></li>
+                    <li><h3>SQL &#9733; &#9733;	&#9733; &#9734;&#9734;</h3></li>
+                    <li><h3>HTML/CSS &#9733;&#9733;&#9733;&#9733;&#9734;</h3></li>
+                    <li><h3>Javascript &#9733;&#9733;&#9734;&#9734;&#9734;</h3></li>
+                    <li><h3>PHP &#9733;	&#9733;&#9733;&#9734;&#9734;</h3></li>
                 </ul>
             </section><br>
             <section id="Leren">
@@ -84,10 +97,19 @@
         </div>
         <footer>
             <section id="footer-section">
-                <p>Volg deze link om met mij contact te hebben <a href="contact.php" id="contacttext">Contact</a></p>
                 <br>
-                Copyright &copy;  2020 Alicia Fernandes
+                Copyright &copy;  2021 Alicia Fernandes
             </section>
         </footer>
+    <script>
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 1900) {
+                $('#menu').fadeIn();
+            } else {
+                $('#menu').fadeOut();
+            }
+        });
+    </script>
     </body>
 </html>
