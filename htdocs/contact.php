@@ -3,7 +3,7 @@
     if(isset($_POST['submit'])) {
         require_once "config.php";
         $db = new config("localhost", "id15916792_takeapicwithproud", "3306", "id15916792_takeapic", "Takeapic-123");
-        $db->insertMessages($_POST['name'],$_POST['email'], $_POST['tel'],$_POST['subject'], $_POST['message']);
+        $db->insertMessages($_POST['name'],$_POST['email'], $_POST['tel'],$_POST['subject'], $_POST['text']);
         header('Location: emailHasBeenSent.html?send=true');
     }
 
@@ -53,7 +53,7 @@
                         <input name="subject" placeholder="Onderwerp" id="subject"required>
                     </label><br>
                     <label>Bericht<br>
-                        <br><textarea name="message" id="bericht-form" placeholder="Bericht" required></textarea>
+                        <br><textarea name="text" id="bericht-form" placeholder="Bericht" required></textarea>
                     </label><br>
                     <button type="submit" value="submit" name="submit" id="button">Submit</button>
                 </form>

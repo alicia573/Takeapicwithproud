@@ -33,10 +33,19 @@ class config
     }
     function insertMessages($name,$email,$tel, $subject, $text)
     {
-        $qeury = "INSERT INTO Messages (name, email, tel, subject,text)
+        $qeury = "INSERT INTO messages ( name, email, tel, subject, text)
                   VALUES ('$name','$email','$tel','$subject','$text')";
 
         $this->dbh()->query($qeury);
+    }
+    public function getTableByName ($tableName) {
+        $query = "SELECT * FROM $tableName";
+        $tableArray = array();
+
+        foreach ($this->dbh()->query($query) as $row) {
+            $tableArray[] = $row;
+        }
+        return $tableArray;
     }
 
 }
