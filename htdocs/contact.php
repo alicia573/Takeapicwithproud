@@ -20,9 +20,9 @@
     </head>
     <body>
      <div id="menu">
-         <!--<div class="icon-contact">
+         <div class="icon-contact">
              <a href="contact.php" class="text-button">Contact</a>
-         </div>-->
+         </div>
          <div class="icon-cv">
              <a class="text-button" href="CV.pdf">CV</a>
          </div>&nbsp;&nbsp;
